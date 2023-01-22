@@ -59,9 +59,12 @@ class LoginViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailField.delegate = self
+        passwordField.delegate = self
         view.backgroundColor = .white
         title = "Log In"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .done, target: self, action: #selector(didTapRegister))
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)
         scrollView.addSubview(emailField)
@@ -99,9 +102,35 @@ class LoginViewController: UIViewController {
         
     }
     
+    @objc private func loginButtonTapped(){
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        guard let email = emailField.text,let password = passwordField.text,!email.isEmpty,!password.isEmpty,password.count>=6 else {
+            showAlert()
+            return
+        }
+    }
+    
+    func showAlert(){
+        let alert = UIAlertController(title: ":(", message: "Please enter all the information correctly", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .cancel))
+        present(alert,animated: true)
+    }
+    
     @objc private func didTapRegister(){
         let registerVC = RegisterViewController()
         navigationController?.pushViewController(registerVC, animated: true)
     }
     
+}
+
+extension LoginViewController : UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailField{
+            passwordField.becomeFirstResponder()
+        }else if textField == passwordField{
+            loginButtonTapped()
+        }
+        return true
+    }
 }
