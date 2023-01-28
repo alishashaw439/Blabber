@@ -20,6 +20,8 @@
 		3868AE86297D3DE20087E76A /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868AE85297D3DE20087E76A /* VideoViewController.swift */; };
 		3868AE88297D3DF30087E76A /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868AE87297D3DF30087E76A /* NewChatViewController.swift */; };
 		3868AE8A297D3E030087E76A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868AE89297D3E030087E76A /* ProfileViewController.swift */; };
+		3868AE8D297D565B0087E76A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868AE8C297D565B0087E76A /* Extensions.swift */; };
+		7C87143715539EAFDE20206B /* Pods_Blabber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A260A159DADD622DB36E62EB /* Pods_Blabber.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		3868AE85297D3DE20087E76A /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		3868AE87297D3DF30087E76A /* NewChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
 		3868AE89297D3E030087E76A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3868AE8C297D565B0087E76A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8A7200C04AFFB587F0259F39 /* Pods-Blabber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blabber.release.xcconfig"; path = "Target Support Files/Pods-Blabber/Pods-Blabber.release.xcconfig"; sourceTree = "<group>"; };
+		99EE5DE69ABC6B971965CDCF /* Pods-Blabber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blabber.debug.xcconfig"; path = "Target Support Files/Pods-Blabber/Pods-Blabber.debug.xcconfig"; sourceTree = "<group>"; };
+		A260A159DADD622DB36E62EB /* Pods_Blabber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blabber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C87143715539EAFDE20206B /* Pods_Blabber.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +63,8 @@
 			children = (
 				3842B8242977E7000035CE29 /* Blabber */,
 				3842B8232977E7000035CE29 /* Products */,
+				7321410CAB092C354E1EBD6A /* Pods */,
+				B86A997B950626F2CF25B18B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,9 +93,8 @@
 		3842B83C29780A4D0035CE29 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3868AE8B297D409C0087E76A /* Login */,
 				3842B8292977E7000035CE29 /* ChatViewController.swift */,
-				3868AE7F297D3DAF0087E76A /* LoginViewController.swift */,
-				3868AE81297D3DC20087E76A /* RegisterViewController.swift */,
 				3868AE83297D3DD30087E76A /* PhotoViewController.swift */,
 				3868AE85297D3DE20087E76A /* VideoViewController.swift */,
 				3868AE87297D3DF30087E76A /* NewChatViewController.swift */,
@@ -124,8 +132,36 @@
 			children = (
 				3842B8252977E7000035CE29 /* AppDelegate.swift */,
 				3842B8272977E7000035CE29 /* SceneDelegate.swift */,
+				3868AE8C297D565B0087E76A /* Extensions.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3868AE8B297D409C0087E76A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3868AE7F297D3DAF0087E76A /* LoginViewController.swift */,
+				3868AE81297D3DC20087E76A /* RegisterViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7321410CAB092C354E1EBD6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99EE5DE69ABC6B971965CDCF /* Pods-Blabber.debug.xcconfig */,
+				8A7200C04AFFB587F0259F39 /* Pods-Blabber.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B86A997B950626F2CF25B18B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A260A159DADD622DB36E62EB /* Pods_Blabber.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3842B8392977E7010035CE29 /* Build configuration list for PBXNativeTarget "Blabber" */;
 			buildPhases = (
+				1076ECA8F28DC42668262E8F /* [CP] Check Pods Manifest.lock */,
 				3842B81E2977E7000035CE29 /* Sources */,
 				3842B81F2977E7000035CE29 /* Frameworks */,
 				3842B8202977E7000035CE29 /* Resources */,
+				6E8D0B549770010E40F535BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +232,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1076ECA8F28DC42668262E8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Blabber-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E8D0B549770010E40F535BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Blabber/Pods-Blabber-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Blabber/Pods-Blabber-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Blabber/Pods-Blabber-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3842B81E2977E7000035CE29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -208,6 +288,7 @@
 				3868AE82297D3DC20087E76A /* RegisterViewController.swift in Sources */,
 				3868AE84297D3DD30087E76A /* PhotoViewController.swift in Sources */,
 				3868AE80297D3DAF0087E76A /* LoginViewController.swift in Sources */,
+				3868AE8D297D565B0087E76A /* Extensions.swift in Sources */,
 				3842B8282977E7000035CE29 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +412,7 @@
 		};
 		3842B83A2977E7010035CE29 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99EE5DE69ABC6B971965CDCF /* Pods-Blabber.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -358,6 +440,7 @@
 		};
 		3842B83B2977E7010035CE29 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A7200C04AFFB587F0259F39 /* Pods-Blabber.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
