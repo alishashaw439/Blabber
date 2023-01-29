@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController, UINavigationControllerDelegate {
 
@@ -163,6 +164,14 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
               showAlert()
               return
         }
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: {authResult,error in
+            guard let result = authResult,error == nil else{
+                print("error occured while creating the user\(error)")
+                return
+            }
+            let user = result.user
+            print("user created\(user)")
+        })
     }
     
     func showAlert(){
