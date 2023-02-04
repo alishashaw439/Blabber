@@ -164,18 +164,29 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
               showAlert()
               return
         }
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: {authResult,error in
-            guard let result = authResult,error == nil else{
-                print("error occured while creating the user\(error)")
+        
+        DatabaseManager.shared.userExists(with: email, completion: {[weak self] exists in
+            guard let strongSelf = self else{
                 return
             }
-            let user = result.user
-            print("user created\(user)")
+            guard exists == false else{
+                strongSelf.showAlert(message:"User already exists. Please login")
+                return
+            }
+            
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult,error in
+                guard let result = authResult,error == nil else{
+                    print("error occured while creating the user\(error)")
+                    return
+                }
+                DatabaseManager.shared.insertUser(with: ChatUser(firstName: firstName, lastName: lastName, emailAddress: email))
+                strongSelf.navigationController?.dismiss(animated: true)
+            })
         })
     }
     
-    func showAlert(){
-        let alert = UIAlertController(title: ":(", message: "Please enter all the information correctly", preferredStyle: .alert)
+    func showAlert(message:String = "Please enter all the information correctly"){
+        let alert = UIAlertController(title: "oops!", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style: .cancel))
         present(alert,animated: true)
     }

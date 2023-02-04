@@ -22,6 +22,7 @@
 		3868AE8A297D3E030087E76A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868AE89297D3E030087E76A /* ProfileViewController.swift */; };
 		3868AE8D297D565B0087E76A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868AE8C297D565B0087E76A /* Extensions.swift */; };
 		3868AE8F29853FEF0087E76A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3868AE8E29853FEF0087E76A /* GoogleService-Info.plist */; };
+		3868AE91298E9DC30087E76A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868AE90298E9DC30087E76A /* DatabaseManager.swift */; };
 		7C87143715539EAFDE20206B /* Pods_Blabber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A260A159DADD622DB36E62EB /* Pods_Blabber.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		3868AE89297D3E030087E76A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3868AE8C297D565B0087E76A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3868AE8E29853FEF0087E76A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3868AE90298E9DC30087E76A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		8A7200C04AFFB587F0259F39 /* Pods-Blabber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blabber.release.xcconfig"; path = "Target Support Files/Pods-Blabber/Pods-Blabber.release.xcconfig"; sourceTree = "<group>"; };
 		99EE5DE69ABC6B971965CDCF /* Pods-Blabber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blabber.debug.xcconfig"; path = "Target Support Files/Pods-Blabber/Pods-Blabber.debug.xcconfig"; sourceTree = "<group>"; };
 		A260A159DADD622DB36E62EB /* Pods_Blabber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blabber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 				3842B8252977E7000035CE29 /* AppDelegate.swift */,
 				3842B8272977E7000035CE29 /* SceneDelegate.swift */,
 				3868AE8C297D565B0087E76A /* Extensions.swift */,
+				3868AE90298E9DC30087E76A /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				3842B8302977E7000035CE29 /* Blabber.xcdatamodeld in Sources */,
 				3868AE82297D3DC20087E76A /* RegisterViewController.swift in Sources */,
 				3868AE84297D3DD30087E76A /* PhotoViewController.swift in Sources */,
+				3868AE91298E9DC30087E76A /* DatabaseManager.swift in Sources */,
 				3868AE80297D3DAF0087E76A /* LoginViewController.swift in Sources */,
 				3868AE8D297D565B0087E76A /* Extensions.swift in Sources */,
 				3842B8282977E7000035CE29 /* SceneDelegate.swift in Sources */,
